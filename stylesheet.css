@@ -9,6 +9,7 @@
 
 * {
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -94,13 +95,13 @@ section {
 #Projects .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap:30px;
+    gap: 30px;
     padding: 20px;
     place-items: center;
     max-width: 1200px;
     margin: auto;
 }
- 
+
 #Projects .project-title {
     height: 525px;
     width: 100%;
@@ -112,7 +113,7 @@ section {
     text-decoration: none;
     color: var(--accent);
     border-radius: 5px;
-    box-shadow: 8px 8px 10px 5px rgba(100,100,100,0.3);
+    box-shadow: 8px 8px 10px 5px rgba(100, 100, 100, 0.3);
 }
 
 #Projects .project-title img {
@@ -121,16 +122,66 @@ section {
     object-fit: cover;
 }
 
-#Projects .project-title p{
+#Projects .project-title p {
     font-size: 25px;
     padding: 10px;
 }
-#Projects .project-title span{
+
+#Projects .project-title span {
     opacity: 0%;
-    padding:0 5px;
+    padding: 0 5px;
 }
-#Projects .project-title:hover span{
+
+#Projects .project-title:hover span {
     opacity: 100%;
-    color:var(--primary);
+    color: var(--primary);
     transition: opacity 0.25s ease-in;
 }
+
+#contact {
+    background-color: var(--neutral);
+    color: var(--base-100);
+}
+#contact h1{
+    margin-top: 300px;
+}
+#contact .coffee-question{
+    color: var(--primary);
+    font-size: 25px;
+    font-style: italic;
+}
+#contact .social-medias{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 30px;
+}
+#contact .social-media{
+    text-decoration: none;
+    color: var(--base-100);
+    transition:transform 0.2s ease-in ;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    font-size: 22px;
+}
+#contact .social-media:hover{
+    transform: translateY(10px);
+}
+ footer{
+    border-top: 3px solid var(--primary);
+    color: var(--base-100);
+    font-size: 25px;
+    padding: 30px;
+ }
+ @media only screen and (width < 700px){
+    h1{
+        font-size: 50px;
+    }
+    #Projects .project-title{
+        height: 600px;
+        width: 100%;
+    } 
+ }
